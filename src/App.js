@@ -1,11 +1,17 @@
 import React from 'react';
 
+import {UserDetails, Users} from "./components";
+
 const App = () => {
-  return (
-      <div>
-          App
-      </div>
-  );
+    return (
+        <div>
+            <div>
+                <Users/>
+                <UserDetails/>
+            </div>
+
+        </div>
+    );
 };
 
-export {App} ;
+export {App};
