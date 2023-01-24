@@ -1,11 +1,13 @@
 import React from 'react';
 
+import {Spaces} from "./components";
+
 const App = () => {
-  return (
-      <div>
-          App
-      </div>
-  );
+    return (
+        <div>
+            <Spaces/>
+        </div>
+    );
 };
 
-export {App} ;
+export {App};
