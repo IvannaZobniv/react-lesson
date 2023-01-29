@@ -1,4 +1,4 @@
-import {useForm} from "react-hook-form";
+import {set, useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../../validators/carValidator";
 import {carService} from "../../services";
@@ -23,35 +23,16 @@ const CarForm = ({setCars,updateCar}) => {
         setCars(prev=>[...prev, data])
         reset()
     };
+    const update = async (car) =>{
+        const {data} = await carService.updateById(updateCar.id,car)
+        if (Object.keys(data).length){
+            const {data}= await carService.getAll()
+            setCars(data)
+        }
+    }
 
     return (
-        // <form onSubmit={handleSubmit(submit)}>
-        //     <input type="text" placeholder={'brand'} {...register('brand', {
-        //         pattern: {
-        //             value: /^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/,
-        //             message: 'Тільки букви від 1 до 20 символів'
-        //         },
-        //         required:{value:true, message:'required'}
-        //     }
-        //     )}/>
-        //     {errors.brand && <span>{errors.brand.message}</span>}
-        //     <input type="text" placeholder={'price'} {...register('price', {
-        //         valueAsNumber: true,
-        //         min: {value: 0, message: 'Мінімум 0'},
-        //         max: {value: 1000000, message: 'Максимум 1000000'},
-        //
-        //     })}/>
-        //     {errors.price && <span>{errors.price.message}</span>}
-        //     <input type="text" placeholder={'year'} {...register('year', {
-        //             valueAsNumber: true,
-        //             min: {value: 1990, message: 'Мін 1990'},
-        //             max: {value: new Date().getFullYear(), message: `Max ${new Date().getFullYear()}`}
-        //         }
-        //     )}/>
-        //     {errors.year&&<span>{errors.year.message}</span>}
-        //     <button>Save</button>
-        // </form>
-        <form onSubmit={handleSubmit(submit)}>
+        <form onSubmit={handleSubmit(updateCar ? update : submit)}>
             <input type="text" placeholder={'brand'} {...register('brand')}/>
             {errors.brand && <span>{errors.brand.message}</span>}
             <input type="text" placeholder={'price'} {...register('price')}/>
