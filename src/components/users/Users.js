@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { usersRequests } from "../../api/requests/usersRequests";
+import React from 'react';
 
-export const Users = ({users}) => {
+const Users = ({users}) => {
     return (
         <div>
+            <h1>User</h1>
             {users.map(item => {
                 const {id, username} = item;
                 return (
@@ -15,3 +15,4 @@ export const Users = ({users}) => {
         </div>
     );
 };
+export{Users};

@@ -1,6 +1,7 @@
 export const baseURL = 'https://jsonplaceholder.typicode.com'
 
-export const requestEndpoints = {
+ const requestEndpoints = {
     users: '/users',
     comments: 'post/1/comments',
 }
+export{requestEndpoints};
