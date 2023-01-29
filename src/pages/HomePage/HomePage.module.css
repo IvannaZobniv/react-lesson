@@ -1,6 +1,7 @@
 .HomePage {
-    background-image: url("../../images/Blog Image-2.jpeg");
-    height: calc(100vh - 7vw);
+    background-image: url("../../images/Blog Image-3.jpg");
+    height: calc(100vh - 4vw);
+
     background-position: center;
     background-attachment: fixed;
     background-size: 100% 100%;
