@@ -1,0 +1,20 @@
+.Header {
+
+    background: #25468e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vw;
+    font-family: Algerian;
+
+
+}
+
+.Header a {
+    text-decoration: none;
+    color: #c7d9fb;
+}
+
+.Header a[class='active'] {
+    color: #fd7436;
+}

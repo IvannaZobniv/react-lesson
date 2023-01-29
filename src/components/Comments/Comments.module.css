@@ -1,0 +1,7 @@
+.Comments {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: 3%;
+    justify-content: space-around;
+}

@@ -1,0 +1,10 @@
+.Todos {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: 3%;
+    justify-content: space-around;
+    background-image: url("../../images/floral-vintage-seamless-pattern-burnt-orange-background-fabrics-scrapbooking-wrapping-194905434.jpeg");
+
+
+}

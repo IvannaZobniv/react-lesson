@@ -1,0 +1,9 @@
+.Albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 10px;
+    padding-top: 3%;
+    background-image: url("../../images/floral-vintage-seamless-pattern-burnt-orange-background-fabrics-scrapbooking-wrapping-194905434.jpeg");
+
+}

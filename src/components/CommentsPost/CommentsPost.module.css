@@ -1,0 +1,13 @@
+.PostComment{
+    text-align: center;
+    width: 400px;
+    border: 2px solid #5d82e0;
+    background: #c7d9fb;
+    font-family: Algerian;
+    margin: 0 auto;
+}
+div {
+    font-size: 15px;
+    text-align: center;
+
+}
