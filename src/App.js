@@ -1,16 +1,23 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
-import {AboutPage, HomePage, PostsPage, UsersPage} from "./pages";
+import {AboutPage, HomePage, NotFoundPage, PostDetailsPage, PostsPage, UsersPage} from "./pages";
+import {Header, PostsDetails} from "./components";
+import {MainLayout} from "./layouts";
 
 const App = () => {
   return (
       <div>
-          <Routes>
-              <Route path={'/'} element={<HomePage/>}/>
-              <Route path={'users'} element={<UsersPage/>}/>
-              <Route path={'posts'} element={<PostsPage/>}/>
-              <Route path={'about'} element={<AboutPage/>}/>
 
+          <Routes>
+              <Route path={'/'} element={<MainLayout/>}>
+                  <Route index element={<HomePage/>}/>
+                  <Route path={'users'} element={<UsersPage/>}/>
+                  <Route path={'posts'} element={<PostsPage/>}>
+                      <Route path={':postId'} element={<PostDetailsPage/>}/>
+                  </Route>
+                  <Route path={'about'} element={<AboutPage/>}/>
+              </Route>
+              <Route path={'*'} element={<NotFoundPage/>}/>
         </Routes>
       </div>
   );
