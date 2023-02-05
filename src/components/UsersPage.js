@@ -1,9 +1,12 @@
-import React from 'react';
+import {UserForm} from "./UserForm";
+import {Users} from "./Users";
 
 const UsersPage = () => {
     return (
         <div>
-            UsersPage
+            <UserForm/>
+            <hr/>
+            <Users/>
         </div>
     );
 };
