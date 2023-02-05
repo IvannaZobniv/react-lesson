@@ -1,16 +1,14 @@
-import React, {Component} from 'react';
-import {userService} from "../services";
-import {User} from "./User";
+import {Component} from "react";
+import {postService} from "../services";
 import {Post} from "./Post";
 
-class Posts extends Component {
+class Posts extends Component{
     constructor(props) {
         super(props);
-        this.state ={post:[]}
+        this.state = {posts:[]}
     }
-
     componentDidMount() {
-        userService.getAll().then(({data})=>this.setState({posts:[...data]}))
+        postService.getAll().then(({data})=>this.setState({posts:[...data]}))
     }
 
     render() {

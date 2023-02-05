@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import {Component} from "react";
 import {userService} from "../services";
 import {User} from "./User";
 
-class Users extends Component {
+class Users extends Component{
     constructor(props) {
         super(props);
-        this.state ={user:[]}
+        this.state = {users:[]}
     }
     componentDidMount() {
         userService.getAll().then(({data})=>this.setState({users:[...data]}))
@@ -19,5 +19,6 @@ class Users extends Component {
         )
     }
 }
+
 
 export {Users};

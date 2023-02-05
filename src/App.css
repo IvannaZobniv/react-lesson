@@ -1,0 +1,15 @@
+.App {
+    /*margin: auto;*/
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+
+}
+.line{
+    height:100vh;
+    width: 2px;
+    border:1px solid black;
+
+}
