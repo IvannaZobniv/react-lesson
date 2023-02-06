@@ -1,11 +1,11 @@
-import React from 'react';
+import {Cat} from "./Cat";
 
-const Cats = () => {
+const Cats = ({cats,dispatch}) => {
     return (
         <div>
-            Cats
+            {cats.map(cat=><Cat key={cat.id} cat={cat} dispatch={dispatch}/>)}
         </div>
     );
 };
 
-export {Cats};s
+export {Cats};

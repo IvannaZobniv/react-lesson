@@ -3,3 +3,12 @@
     justify-content: space-around;
 
 }
+
+.cat{
+    background: cornflowerblue;
+    padding: 10px;
+}
+.dog{
+    background: violet;
+    padding: 10px;
+}

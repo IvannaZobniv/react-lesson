@@ -1,9 +1,11 @@
-import React from 'react';
+import css from './Dog.module.css';
+const Dog = ({dog,dispatch}) => {
+    const {id, name} = dog;
 
-const Dog = () => {
     return (
-        <div>
-            Dog
+        <div  >
+            {id}) {name}
+            <button className={css.Dog} onClick={()=>dispatch({type:'DELETE_DOG', payload:id})}>delete</button>
         </div>
     );
 };
