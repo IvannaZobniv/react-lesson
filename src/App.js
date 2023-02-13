@@ -1,11 +1,13 @@
-import React from 'react';
+import {UseMome} from "./components/UseMemo/UseMome";
+import {UseCallBack} from "./components/UseCallBack/UseCallBack";
 
 const App = () => {
-  return (
-      <div>
-          App
-      </div>
-  );
+    return (
+        <div>
+            {/*<UseMome/>*/}
+            <UseCallBack/>
+        </div>
+    );
 };
 
-export {App} ;
+export {App};
