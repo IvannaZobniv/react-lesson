@@ -24,7 +24,7 @@ const LoginPage = () => {
             <div>
                 <form onSubmit={handleSubmit(login)}>
                     <input type="text" placeholder={'username'} {...register('username')}/>
-                    <input type="password" placeholder={'password'} {...register('password')}/>
+                    <input type="text" placeholder={'password'} {...register('password')}/>
                     <button>login</button>
                 </form>
             </div>
