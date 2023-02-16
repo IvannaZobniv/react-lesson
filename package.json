@@ -1,0 +1,26 @@
+{
+  "name": "react-lesson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.9.5",
+    "axios": "0.27.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvannaZobniv/react-lesson.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvannaZobniv/react-lesson/issues"
+  },
+  "homepage": "https://github.com/IvannaZobniv/react-lesson#readme"
+}
