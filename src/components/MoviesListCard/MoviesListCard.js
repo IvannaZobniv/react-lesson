@@ -1,43 +1,46 @@
-import css from './MoviesListCard.module.css'
 import {StarsRating} from "../StarsRating/StarsRating";
+import {GenreBadge} from "../GenreBadge/GenreBadge";
 
+import css from './MovieListCard.module.css'
 import {Link} from "react-router-dom";
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {genresActions} from "../../redux";
 
 const MoviesListCard = ({movie}) => {
-    const {
-        // adult,
-        // backdrop_path,
-        // genre_ids,
-        id,
-        title,
-        overview,
-        // popularity,
-        poster_path,
-        release_date,
-        vote_average,
-        vote_count
-    } = movie
 
+    const dispatch = useDispatch();
+
+    const {genres} = useSelector(state => state.genres);
+
+    useEffect(() => {
+        dispatch(genresActions.getGenres())
+    }, [dispatch])
+
+    const {id, original_title, poster_path, vote_average, genre_ids} = movie;
 
     return (
-        <div className={css.card}>
-            <div>
-                <Link to={`/detail-movie/${id}`} className={css.Link}>
-                    <div className={css.poster}>
-                        <img src={`https://image.tmdb.org/t/p/w300/${poster_path}`} alt={title}/>
+        <Link to={`/movie/${id}`}>
+            <div className={css.MovieListCard}>
+
+                <div className={css.container}>
+                    <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt={original_title}/>
+                    <div className={css.topright}>
+                        {genre_ids.map(id =>
+                            <div key={id}>
+                                {genres.map(genre => id === genre.id && <GenreBadge key={genre.id} genre={genre}/>)}
+                            </div>)}
                     </div>
-                    <div className={css.header}>{title}</div>
-                </Link>
-                <div className={css.overview}>{overview}</div>
-            </div>
-            <div>
-                <div className={css.votes}>
-                    <div className={css.stars}><StarsRating vote_average={vote_average}/></div>
-                    <div className={css.vote}>Vote: {vote_count}</div>
                 </div>
-                <div className={css.data}>{release_date}</div>
+
+                <div>
+                    <StarsRating vote_average={vote_average}/>
+                </div>
+
+
+                <div className={css.title}>{original_title}</div>
             </div>
-        </div>
+        </Link>
     );
 };
 

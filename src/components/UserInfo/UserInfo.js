@@ -1,7 +1,7 @@
 const UserInfo = () => {
     return (
         <div>
-            UserInfo
+            Ivanna Zobniv
         </div>
     );
 };

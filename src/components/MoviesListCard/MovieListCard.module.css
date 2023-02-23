@@ -1,0 +1,43 @@
+.MovieListCard {
+    width: 250px;
+    height: 550px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.topright{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    margin-right: -15px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.stars_badge{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+
+.title {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+}

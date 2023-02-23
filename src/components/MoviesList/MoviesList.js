@@ -1,51 +1,42 @@
-import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {useSearchParams} from "react-router-dom";
-
-import css from './MoviesList.module.css'
-import {moviesAction} from "../../redux";
+import {useDispatch, useSelector} from "react-redux";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
-import {Genres} from "../Genres/Genres";
+import {moviesActions} from "../../redux";
 
+import css from './MovieList.module.css'
+import {useSearchParams} from "react-router-dom";
 
 const MoviesList = () => {
 
-
     const dispatch = useDispatch();
-    const {movies, errors, total_pages} = useSelector(state => state.moviesReducer);
+
+    const {movies, page, errors, loading} = useSelector(state => state.movies);
 
     const [query, setQuery] = useSearchParams({page: '1'});
 
     useEffect(() => {
-        dispatch(moviesAction.getAllMovies(query.get('page')))
+        dispatch(moviesActions.getMovies({page: query.get('page')}))
     }, [dispatch, query])
 
-    const prevPage = () => {
-        setQuery(value => ({page: value.get('page') - 1}))
-    }
-    const nextPage = () => {
-        setQuery(value => ({page: +value.get('page') + 1}))
-    }
-    const numberPage = query.get('page')
-
-
     return (
-        <div className={css.placeGenres}>
-            <Genres/>
-            <div>
-                <div className={css.moviesList}>
-                    {movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
-                    {errors && errors.map(err => <h1>{err}</h1>)}
-                </div>
-                <div className={css.navigate}>
-                    <button disabled={numberPage <= 1} onClick={prevPage}>Prev page</button>
-                    <button disabled={numberPage >= 500 || numberPage >= total_pages} onClick={nextPage}>Next page
-                    </button>
-                </div>
+        <div>
 
+            {errors && JSON.stringify(errors)}
+            {loading && <h3>Loading...</h3>}
+
+            <div className={css.MovieList}>
+                {movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
+            </div>
+
+            <div className={css.pagination}>
+                <button disabled={page === 1}
+                        onClick={() => setQuery(query => ({page: +query.get('page') - 1}))}>prev</button>
+                <div>- {page} -</div>
+                <button disabled={page === 500}
+                        onClick={() => setQuery(query => ({page: +query.get('page') + 1}))}>next</button>
             </div>
         </div>
     );
-}
+};
 
-export {MoviesList}
+export {MoviesList};

@@ -1,15 +1,14 @@
 import css from './Genre.module.css'
 
 const Genre = ({genre}) => {
-    const {id, name} = genre
+
+    const {name} = genre;
 
     return (
+        <div className={css.Genre}>
+            <button className={css.butt}><b>{name}</b></button>
 
-        <div className={css.genre}>
-            {id}
-            {name}
         </div>
-
     );
 };
 

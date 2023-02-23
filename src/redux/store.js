@@ -1,13 +1,15 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-
 import {genresReducer, moviesReducer} from "./slices";
 
+const rootReducer = combineReducers({
+    genres: genresReducer,
+    movies: moviesReducer
+});
 
+const setUpStore = () => configureStore({
+    reducer: rootReducer
+});
 
-const rootReducer = combineReducers({moviesReducer,genresReducer});
-
-const setupStore = () => configureStore({reducer: rootReducer});
-
-
-
-export {setupStore}
+export {
+    setUpStore
+}
