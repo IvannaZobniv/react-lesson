@@ -1,38 +1,65 @@
 html {
-    background-image: url(https://i.pinimg.com/564x/86/b2/ba/86b2bae7b842e55c91098117332898fb.jpg);
+    background-image: url(https://oir.mobi/uploads/posts/2022-08/1661411116_1-oir-mobi-p-fon-sinii-zheltii-vkontakte-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
 
+/*.backgroundColor div {*/
+/*    background-image: url("https://top-fon.com/uploads/posts/2021-07/1626839085_57-p-top-krasnii-fon-64.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    background-attachment: fixed;*/
+/*    background-size: cover;*/
+/*}*/
+
+.dark .MainLayout {
+    background-color: #18243e;
+    color: #fff;
+}
+
 .MainLayout {
+
     display: flex;
-    box-sizing: border-box;
+    flex-direction: column;
     justify-content: center;
-    text-decoration: none;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .top {
-    height: 80px;
+    /*height: 80px;*/
     display: flex;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .webtitle{
-    width: 300px;
     display: flex;
-    box-sizing: border-box;
-    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box ;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.webtitle img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+
 }
 
 .owufilm{
-    text-align: center;
-    font-size: 30px;
-    color: #75603d;
-    padding-left: 5px;
-    padding-top: 26px;
+    font-size: 35px;
+    color: #f6d51b;
+    padding-left: 10%;
+    padding-top: 20px;
 }
 
 .usertitle{
@@ -45,9 +72,14 @@ html {
 }
 
 .userlogo{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    overflow: hidden;
 }
+
 .background {
     width: 80%;
     height: 100%;
@@ -56,5 +88,15 @@ html {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background: snow;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+button {
+    background-color: #f6d51b;
+    color: #333;
+}
+
+button.dark {
+    background-color: #18243e;
+    color: #f6d51b;
 }

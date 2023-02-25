@@ -1,9 +1,11 @@
+import css from './UserInfo.module.css';
+
 const UserInfo = () => {
     return (
-        <div>
-            Ivanna Zobniv
+        <div className={css['user-info']}>
+            <span className={css['user-info__name']}>Ivanna Zobniv</span>
         </div>
     );
 };
 
-export {UserInfo};
+export { UserInfo };

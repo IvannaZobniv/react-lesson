@@ -1,18 +1,19 @@
 .Header {
     height: 50px;
-    background: cornflowerblue;
+    background: #f6d51b;
     display: flex;
     box-sizing: border-box;
     justify-content: space-around;
     align-items: center;
 }
 
-.Header a{
+.Header-link {
     text-decoration: none;
     color: snow;
     font-size: 25px;
 }
 
-.Header a[class='active']{
-    color: black;
+.Header-link.active {
+    color: #25468e;
 }
+

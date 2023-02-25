@@ -12,3 +12,4 @@ const MoviesPage = () => {
 };
 
 export {MoviesPage};
+

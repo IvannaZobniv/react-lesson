@@ -1,14 +1,27 @@
-const Video = ({video}) => {
+import styles from './Video.module.css';
 
-    const{key}=video;
+const Video = ({ video }) => {
+    const key = video?.key;
+
+    if (!key) {
+        return <div>No video found</div>;
+    }
 
     return (
-        <div>
-            <iframe width="640" height="360" src={`https://www.youtube.com/embed/${key}`}
-                    frameBorder="0">
-            </iframe>
+        <div className={styles['video-container']}>
+            <iframe
+                className={styles['video-iframe']}
+                src={`https://www.youtube.com/embed/${key}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
+            <div className={styles['video-description']}>
+                {video?.name}
+            </div>
         </div>
     );
 };
 
-export {Video};
+export { Video };

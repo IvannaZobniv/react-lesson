@@ -1,12 +1,39 @@
-.butt{
-    width: 120px;
-    text-align: left;
-    background: cornflowerblue;
-    color: #d4f506;
+.butt {
+    display: inline-block;
+    padding: 8px 15px;
     border: none;
+    border-radius: 5px;
+    background-color: #363a41;
+    color: #d4d4d4;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center ;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
-.Genre{
-    margin: 5px;
+.butt:hover {
+    background-color: #204f7d;
+}
 
+.Genre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .butt {
+        width: 100%;
+    }
+}
+body.dark .butt {
+    background-color: #d4d4d4;
+    color: #363a41;
+}
+
+body.dark .butt:hover {
+    background-color: #204f7d;
+    color: #d4d4d4;
 }

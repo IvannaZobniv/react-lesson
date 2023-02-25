@@ -6,6 +6,4 @@ const genresService = {
     getById:(id)=>apiService.get(`/genre/${id}`)
 }
 
-export {
-    genresService
-}
+export {genresService}

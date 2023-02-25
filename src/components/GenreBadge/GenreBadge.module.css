@@ -1,14 +1,38 @@
-.GenreBadge{
+.GenreBadge {
     display: flex;
     box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: end;
 }
 
-.name{
-    background: cornflowerblue;
-    color: black;
+.name:hover {
+    background: #b7c9ff;
+}
+.nameLight{
+    background: #363a41;
+    color: #d4d4d4;
     margin-bottom: 5px;
     text-decoration: none;
-    padding: 2px;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
 }
+.nameLight:hover {
+    background-color: #204f7d;
+}
+
+.nameDark{
+    background: #363a41;
+    color: #d4d4d4;
+    margin-bottom: 5px;
+    text-decoration: none;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+.nameDark:hover {
+    background-color: #b7c9ff;
+}
+

@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
+
 import {moviesService} from "../../services";
+import css from './PosterPreview.module.css';
 
 const PosterPreview = ({movieId}) => {
     const [movie, setMovie] = useState(null)
@@ -9,12 +11,10 @@ const PosterPreview = ({movieId}) => {
     }, [movieId])
 
     return (
-        <div>
+        <div className={css['poster-container']}>
             {movie &&
-                <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} alt={movie.original_title + '_poster'}/>
+                <img className={css['poster-image']} src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} alt={movie.original_title + '_poster'}/>
             }
-
-
         </div>
     );
 };

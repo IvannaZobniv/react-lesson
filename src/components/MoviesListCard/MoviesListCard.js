@@ -1,11 +1,11 @@
-import {StarsRating} from "../StarsRating/StarsRating";
-import {GenreBadge} from "../GenreBadge/GenreBadge";
-
-import css from './MovieListCard.module.css'
-import {Link} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {genresActions} from "../../redux";
+import {Link} from "react-router-dom";
+
+import {StarsRating} from "../StarsRating/StarsRating";
+import {GenreBadge} from "../GenreBadge/GenreBadge";
+import css from './MovieListCard.module.css'
 
 const MoviesListCard = ({movie}) => {
 
@@ -36,7 +36,6 @@ const MoviesListCard = ({movie}) => {
                 <div>
                     <StarsRating vote_average={vote_average}/>
                 </div>
-
 
                 <div className={css.title}>{original_title}</div>
             </div>
