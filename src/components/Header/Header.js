@@ -1,18 +1,19 @@
 import css from './Header.module.css';
-import {NavLink} from "react-router-dom";
+import {Link } from "react-router-dom";
 import {SearchBar} from "../SearchBar/SearchBar";
 
 const Header = () => {
+    const logo = 'MOVIES';
+
     return (
         <div className={css.Header}>
-            <NavLink to={''}>MOVIES</NavLink>
+            <Link to='/' className={css['Header-link']}>{logo}</Link>
 
             <div>
-                <SearchBar/>
+                <SearchBar />
             </div>
-
         </div>
     );
 };
 
-export {Header};
+export { Header };

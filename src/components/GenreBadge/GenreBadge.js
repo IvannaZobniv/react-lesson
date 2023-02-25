@@ -1,10 +1,11 @@
 import css from './GenreBadge.module.css'
 
-const GenreBadge = ({genre}) => {
+const GenreBadge = ({genre, isDarkMode}) => {
     const {name} = genre;
+    const badgeStyle = isDarkMode ? css.nameDark : css.nameLight;
     return (
         <div className={css.GenreBadge}>
-            <div className={css.name}>{name}</div>
+            <div className={badgeStyle}>{name}</div>
         </div>
     );
 };

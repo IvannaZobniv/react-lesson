@@ -22,7 +22,7 @@ const SearchBar = () => {
 
     return (
         <div>
-            <form onSubmit={searchMovies}>
+            <form onSubmit={searchMovies} >
                 <input
                     type="text"
                     placeholder="Search movie"
@@ -32,7 +32,7 @@ const SearchBar = () => {
                 <button type="submit">Search</button>
             </form>
 
-            <div className={css.movieList}>
+            <div className={css.MovieList}>
                 {movies.map((movie) => (
                     <MoviesListCard key={movie.id} movie={movie} />
                 ))}

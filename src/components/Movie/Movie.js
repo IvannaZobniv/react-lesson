@@ -1,10 +1,12 @@
-const Movie = ({movie}) => {
+import css from './Movie.module.css';
 
-    const {original_title, genre_ids}= movie
+const Movie = ({movie}) => {
+    const {original_title, genre_ids}= movie;
 
     return (
-        <div>
-            {original_title},{genre_ids}
+        <div className={css.Movie}>
+            <div className={css.Title}>{original_title}</div>
+            <div className={css.GenreIds}>Genres: {genre_ids.join(', ')}</div>
         </div>
     );
 };
