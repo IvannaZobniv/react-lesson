@@ -6,14 +6,6 @@ html {
     background-size: cover;
 }
 
-/*.backgroundColor div {*/
-/*    background-image: url("https://top-fon.com/uploads/posts/2021-07/1626839085_57-p-top-krasnii-fon-64.jpg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*    background-attachment: fixed;*/
-/*    background-size: cover;*/
-/*}*/
-
 .dark .MainLayout {
     background-color: #18243e;
     color: #fff;
