@@ -1,7 +1,7 @@
-import {MovieInfo, PosterPreview, Videos} from "../../components";
 import {useParams} from "react-router-dom";
 
 import css from './MoviePage.module.css'
+import {MovieInfo, PosterPreview, Videos} from "../../components";
 
 const MoviePage = () => {
     const {movieId} = useParams();

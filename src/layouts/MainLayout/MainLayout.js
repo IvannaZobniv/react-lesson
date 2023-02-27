@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import css from "./MainLayout.module.css";
-
 import { Header, UserInfo } from "../../components";
 
 const MainLayout = () => {

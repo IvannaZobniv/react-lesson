@@ -44,4 +44,3 @@ const SearchBar = () => {
 
 export { SearchBar };
 
-

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { moviesService } from "../../services";
 
+import { moviesService } from "../../services";
 import css from "./MovieInfo.module.css";
 
 const MovieInfo = ({ movieId }) => {

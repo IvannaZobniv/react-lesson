@@ -1,5 +1,4 @@
 import {Genres, MoviesList} from "../../components";
-
 import css from'./MoviesPage.module.css';
 
 const MoviesPage = () => {

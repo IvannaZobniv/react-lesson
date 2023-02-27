@@ -7,11 +7,7 @@ const moviesService = {
     getVideoById:(id)=>apiService.get(`/movie/${id}/videos`),
     searchMovie:(query)=>apiService.get(`${urls.search}&language=en-US&query=${query}&page=1&include_adult=false`)
 
-
-
 }
 
-export {
-    moviesService
-}
+export {moviesService}
 
